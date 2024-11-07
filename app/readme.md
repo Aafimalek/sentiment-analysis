@@ -18,10 +18,11 @@
 
 ## About the Project
 
-This is a **Sentiment Analysis Web Application** that allows users to analyze the sentiment of text inputs (e.g., tweets). The app uses a machine learning model built with `scikit-learn` to classify text as positive, negative, or neutral. Users can interact with the model via a modern, minimalistic frontend designed for simplicity and ease of use.
+This is a **Sentiment Analysis Web Application** that allows users to analyze the sentiment of text inputs (e.g., tweets). The app uses a machine learning model built with `scikit-learn` to classify text as positive or negative. Users can interact with the model via a modern, minimalistic frontend designed for simplicity and ease of use.
 
 This application can be deployed locally or using Docker, and it's set up to be easily accessible through Docker Hub for streamlined deployment.
 
+--view live at:- https://sentiment-analysis-uyeg.onrender.com/
 ## Features
 
 - **Sentiment Analysis:** Classify input text into positive, negative, or neutral sentiment.
