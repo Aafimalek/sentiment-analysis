@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tweet Sentiment Analysis</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+           
+            <h1>Tweet Sentiment Analysis</h1>
+            <p>Analyze the sentiment of your tweets with AI-powered insights.</p>
+        </div>
+        <textarea id="tweetText" placeholder="Enter your tweet here..."></textarea>
+        <button class="analyze-btn" onclick="analyzeSentiment()">Analyze Sentiment</button>
+        <div id="result" class="result"></div>
+    </div>
+    <script>
+        async function analyzeSentiment() {
+            const tweetText = document.getElementById('tweetText').value;
+            const resultDiv = document.getElementById('result');
+
+            resultDiv.textContent = '';
+
+            if (!tweetText.trim()) {
+                resultDiv.textContent = 'Please enter a tweet text.';
+                resultDiv.classList.add('error');
+                return;
+            }
+
+            const response = await fetch('/analyze', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({ text: tweetText })
+            });
+
+            if (response.ok) {
+                const data = await response.json();
+                resultDiv.textContent = `Sentiment: ${data.sentiment}`;
+                resultDiv.classList.add(data.sentiment === 'Positive' ? 'positive' : 'negative');
+            } else {
+                resultDiv.textContent = 'Error analyzing sentiment. Please try again.';
+                resultDiv.classList.add('error');
+            }
+        }
+    </script>
+</body>
+</html>
