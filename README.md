@@ -1,7 +1,7 @@
 
 # Sentiment Analysis Web Application
 
-![Python](https://img.shields.io/badge/Python-3.9+-blue) ![Flask](https://img.shields.io/badge/Flask-2.0+-red) ![Docker](https://img.shields.io/badge/Docker-20.10+-blue) ![Sklearn](https://img.shields.io/badge/Scikit--Learn-0.24+-orange) ![Joblib](https://img.shields.io/badge/Joblib-1.0+-green)
+![Python](https://img.shields.io/badge/Python--blue) ![Flask](https://img.shields.io/badge/Flask-red) ![Docker](https://img.shields.io/badge/Docker-blue) ![Sklearn](https://img.shields.io/badge/Scikit--Learn--orange) ![Joblib](https://img.shields.io/badge/Joblib-green)
 
 ## Table of Contents
 
